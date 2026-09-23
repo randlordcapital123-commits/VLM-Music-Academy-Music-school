@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0614">
+<title>VLM Music Academy | Khayelitsha • Cape Town</title>
+<meta name="description" content="VLM Music Academy — professional music lessons, recording, beat production and artist development in Khayelitsha, Cape Town, South Africa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= ICON SPRITE ================= -->
+<svg style="display:none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 10.59V7a1 1 0 1 0-2 0v6a1 1 0 0 0 .29.71l3 3a1 1 0 0 0 1.42-1.42z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 4-8 5-8-5V6l8 5 8-5z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M5 12h12.17l-5.59-5.59L13 5l7 7-7 7-1.41-1.41L17.17 12z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path fill="currentColor" d="M18.3 5.71 12 12.01l-6.3-6.3-1.41 1.41 6.3 6.3-6.3 6.29 1.41 1.42 6.3-6.3 6.3 6.3 1.4-1.42-6.29-6.29 6.3-6.3z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6a5 5 0 0 0-10 0v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2m-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4M9 8V6a3 3 0 0 1 6 0v2z"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 17.27 6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/></symbol>
+</svg>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="#home" class="brand">
+      <img id="brandLogo" class="brand-logo" alt="VLM Music Academy logo">
+      <span class="brand-text">
+        <strong id="brandName">VLM Music Academy</strong>
+        <small id="brandTag">Khayelitsha • Cape Town</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button class="nav-link nav-admin" id="navAdmin" type="button">
+        <svg class="ic"><use href="#i-lock"/></svg> Admin
+      </button>
+      <a href="#" class="btn btn-wa nav-wa" id="navWa" target="_blank" rel="noopener">
+        <svg class="ic"><use href="#i-wa"/></svg> WhatsApp
+      </a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+
+  <div class="container hero-content">
+    <span class="hero-badge">
+      <svg class="ic"><use href="#i-note"/></svg>
+      <span id="heroBadge">Khayelitsha • Cape Town • South Africa</span>
+    </span>
+
+    <h1 class="hero-title" id="heroTitle">Where Khayelitsha Finds Its Sound</h1>
+
+    <p class="hero-sub" id="heroSub">
+      Professional music lessons, studio recording, beat production and full artist
+      development — taught by real industry professionals in the heart of Khayelitsha.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#" id="heroWa" class="btn btn-wa btn-lg" target="_blank" rel="noopener">
+        <svg class="ic"><use href="#i-wa"/></svg> Chat on WhatsApp
+      </a>
+      <a href="#" id="heroCall" class="btn btn-call btn-lg">
+        <svg class="ic"><use href="#i-phone"/></svg> Call Us Now
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><strong>10+</strong><span>Years Experience</span></div>
+      <div class="stat"><strong>500+</strong><span>Students Taught</span></div>
+      <div class="stat"><strong>6</strong><span>Studio Rooms</span></div>
+      <div class="stat"><strong>5★</strong><span>Community Rated</span></div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <div class="about-img-wrap">
+        <img id="aboutImage" alt="About VLM Music Academy" data-fallback="">
+        <div class="about-float">
+          <svg class="ic"><use href="#i-star"/></svg>
+          <div>
+            <strong>Trusted Local</strong>
+            <span>Music Academy</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-blob"></div>
+    </div>
+
+    <div class="about-copy reveal">
+      <span class="eyebrow">About Us</span>
+      <h2 class="section-title" id="aboutTitle">More Than A Music School — A Movement</h2>
+      <p id="aboutText">
+        VLM Music Academy was born in Khayelitsha with one goal: to give young, hungry
+        talent a real professional platform. From your very first lesson to your first
+        recorded single, we walk the whole journey with you.
+      </p>
+
+      <ul class="about-list">
+        <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span> One-on-one &amp; group lessons for all ages</li>
+        <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span> Fully equipped recording &amp; production studio</li>
+        <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span> Qualified, working industry instructors</li>
+        <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span> Affordable monthly packages &amp; payment plans</li>
+      </ul>
+
+      <div class="about-actions">
+        <a href="#services" class="btn btn-primary">View Our Services <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#" id="aboutWa" class="btn btn-outline" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#i-wa"/></svg> Ask a Question
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2 class="section-title">Our Music Services</h2>
+      <p class="section-lead">
+        Professional training and studio time at prices built for our community.
+        Tap any service to enquire instantly on WhatsApp.
+      </p>
+    </div>
+
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our World</span>
+      <h2 class="section-title">Inside The Academy</h2>
+      <p class="section-lead">Lessons, sessions, live shows and the people who make it happen.</p>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section section-dark" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow light">Get In Touch</span>
+      <h2 class="section-title light">Book Your First Lesson</h2>
+      <p class="section-lead light">We're based in Khayelitsha and we reply fast. Reach out on WhatsApp or give us a call.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <a class="contact-card" id="cPhone" href="#">
+          <span class="cc-icon"><svg class="ic"><use href="#i-phone"/></svg></span>
+          <span class="cc-body"><small>Call Us</small><strong id="cPhoneText">+27 82 863 7824</strong></span>
+        </a>
+        <a class="contact-card wa" id="cWa" href="#" target="_blank" rel="noopener">
+          <span class="cc-icon"><svg class="ic"><use href="#i-wa"/></svg></span>
+          <span class="cc-body"><small>WhatsApp</small><strong id="cWaText">+27 82 863 7824</strong></span>
+        </a>
+        <div class="contact-card">
+          <span class="cc-icon"><svg class="ic"><use href="#i-pin"/></svg></span>
+          <span class="cc-body"><small>Location</small><strong id="cAddress">Khayelitsha, Cape Town</strong></span>
+        </div>
+        <div class="contact-card">
+          <span class="cc-icon"><svg class="ic"><use href="#i-clock"/></svg></span>
+          <span class="cc-body"><small>Opening Hours</small><strong id="cHours">Mon – Sat: 08:00 – 19:00</strong></span>
+        </div>
+        <a class="contact-card" id="cMail" href="#">
+          <span class="cc-icon"><svg class="ic"><use href="#i-mail"/></svg></span>
+          <span class="cc-body"><small>Email</small><strong id="cEmail">hello@vlmmusicacademy.co.za</strong></span>
+        </a>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <h3>Send Us A Message</h3>
+        <p class="form-note">This form opens WhatsApp with your message ready to send.</p>
+
+        <label>Your Name
+          <input type="text" id="fName" placeholder="e.g. Thabo M." required>
+        </label>
+
+        <label>Your Number
+          <input type="tel" id="fPhone" placeholder="e.g. 082 123 4567">
+        </label>
+
+        <label>Service You Want
+          <select id="fService"></select>
+        </label>
+
+        <label>Message
+          <textarea id="fMsg" rows="4" placeholder="Tell us what you'd like to learn..."></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-wa btn-block btn-lg">
+          <svg class="ic"><use href="#i-wa"/></svg> Send via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img id="footLogo" class="foot-logo" alt="VLM Music Academy logo">
+      <div>
+        <strong id="footName">VLM Music Academy</strong>
+        <p id="footTag">Where Khayelitsha Finds Its Sound</p>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a id="footPhone" href="#">+27 82 863 7824</a>
+      <a id="footWa" href="#" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a id="footMail" href="#">hello@vlmmusicacademy.co.za</a>
+      <span id="footAddress">Khayelitsha, Cape Town</span>
+    </div>
+
+    <div class="footer-col">
+      <h4>Academy</h4>
+      <button class="foot-admin-link" id="footAdmin" type="button">Admin Login</button>
+      <span id="footHours">Mon – Sat: 08:00 – 19:00</span>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> <span id="footName2">VLM Music Academy</span>. All rights reserved.</p>
+    <p class="made">Khayelitsha • Cape Town • South Africa</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="#" id="floatWa" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp us">
+  <svg class="ic"><use href="#i-wa"/></svg>
+</a>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <figure class="lb-figure">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<!-- ================= LOGIN ================= -->
+<div class="modal-layer" id="loginOverlay" aria-hidden="true">
+  <div class="login-card" role="dialog" aria-modal="true" aria-label="Admin login">
+    <button class="modal-x" id="loginClose" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+    <div class="login-logo"><img id="loginLogo" alt="Logo"></div>
+    <h2>Admin Access</h2>
+    <p>Enter your password to manage the website.</p>
+    <form id="loginForm">
+      <label>Password
+        <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password" required>
+      </label>
+      <div class="login-error" id="loginError">Incorrect password. Please try again.</div>
+      <button class="btn btn-primary btn-block btn-lg" type="submit">
+        <svg class="ic"><use href="#i-lock"/></svg> Login
+      </button>
+    </form>
+    <p class="login-hint" id="loginHint"></p>
+  </div>
+</div>
+
+<!-- ================= ADMIN DASHBOARD ================= -->
+<div class="admin-shell" id="adminShell" aria-hidden="true">
+  <header class="admin-top">
+    <div class="admin-brand">
+      <img id="adminLogo" alt="Logo">
+      <div>
+        <strong>Admin Dashboard</strong>
+        <small id="adminBrandName">VLM Music Academy</small>
+      </div>
+    </div>
+    <div class="admin-top-actions">
+      <button class="btn-sm ghost" id="adminViewSite" type="button">View Site</button>
+      <button class="btn-sm ghost danger" id="adminLogout" type="button">Logout</button>
+      <button class="icon-btn" id="adminClose" aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+    </div>
+  </header>
+
+  <div class="admin-body">
+    <aside class="admin-side" id="adminSide">
+      <button class="admin-tab active" data-tab="services"><svg class="ic"><use href="#i-note"/></svg><span>Services</span></button>
+      <button class="admin-tab" data-tab="gallery"><svg class="ic"><use href="#i-star"/></svg><span>Gallery</span></button>
+      <button class="admin-tab" data-tab="branding"><svg class="ic"><use href="#i-upload"/></svg><span>Images &amp; Logo</span></button>
+      <button class="admin-tab" data-tab="business"><svg class="ic"><use href="#i-pin"/></svg><span>Business Info</span></button>
+      <button class="admin-tab" data-tab="settings"><svg class="ic"><use href="#i-lock"/></svg><span>Settings</span></button>
+    </aside>
+
+    <main class="admin-main">
+
+      <!-- SERVICES -->
+      <section class="admin-panel active" data-panel="services">
+        <div class="panel-head">
+          <div>
+            <h2>Services</h2>
+            <p>Add, edit or delete services. Changes save automatically.</p>
+          </div>
+          <button class="btn btn-primary" id="addServiceBtn" type="button">
+            <svg class="ic"><use href="#i-plus"/></svg> Add Service
+          </button>
+        </div>
+        <div class="adm-list" id="adminServices"></div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="admin-panel" data-panel="gallery">
+        <div class="panel-head">
+          <div>
+            <h2>Gallery</h2>
+            <p>Drag &amp; drop photos here, or click to browse. Multiple files supported.</p>
+          </div>
+        </div>
+
+        <div class="dropzone" id="galleryDrop">
+          <svg class="ic dz-icon"><use href="#i-upload"/></svg>
+          <strong>Drop images here</strong>
+          <span>or click to choose files (JPG / PNG / WEBP)</span>
+          <input type="file" id="galleryInput" accept="image/*" multiple hidden>
+        </div>
+
+        <div class="adm-gallery" id="adminGallery"></div>
+      </section>
+
+      <!-- BRANDING -->
+      <section class="admin-panel" data-panel="branding">
+        <div class="panel-head">
+          <div>
+            <h2>Images &amp; Logo</h2>
+            <p>Replace the logo, hero background and about photo. Drag &amp; drop or click.</p>
+          </div>
+        </div>
+
+        <div class="branding-grid">
+          <div class="brand-card">
+            <h3>Business Logo</h3>
+            <div class="dropzone mini" id="logoDrop">
+              <img id="logoPreview" alt="Logo preview">
+              <input type="file" id="logoInput" accept="image/*" hidden>
+              <span class="dz-hint"><svg class="ic"><use href="#i-upload"/></svg> Drop or click</span>
+            </div>
+            <button class="btn-sm ghost danger" data-reset="logo" type="button">Reset to default</button>
+          </div>
+
+          <div class="brand-card">
+            <h3>Hero Background</h3>
+            <div class="dropzone wide" id="heroDrop">
+              <img id="heroPreview" alt="Hero preview">
+              <input type="file" id="heroInput" accept="image/*" hidden>
+              <span class="dz-hint"><svg class="ic"><use href="#i-upload"/></svg> Drop or click</span>
+            </div>
+            <button class="btn-sm ghost danger" data-reset="heroImage" type="button">Reset to default</button>
+          </div>
+
+          <div class="brand-card">
+            <h3>About Image</h3>
+            <div class="dropzone wide" id="aboutDrop">
+              <img id="aboutPreview" alt="About preview">
+              <input type="file" id="aboutInput" accept="image/*" hidden>
+              <span class="dz-hint"><svg class="ic"><use href="#i-upload"/></svg> Drop or click</span>
+            </div>
+            <button class="btn-sm ghost danger" data-reset="aboutImage" type="button">Reset to default</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUSINESS -->
+      <section class="admin-panel" data-panel="business">
+        <div class="panel-head">
+          <div>
+            <h2>Business Information</h2>
+            <p>This text appears across the website. Changes save automatically.</p>
+          </div>
+        </div>
+
+        <div class="form-grid" id="businessForm">
+          <label>Business Name <input type="text" data-biz="name"></label>
+          <label>Tagline / Location Line <input type="text" data-biz="tagline"></label>
+          <label>Phone Number <input type="tel" data-biz="phone"></label>
+          <label>WhatsApp Number <input type="tel" data-biz="whatsapp"></label>
+          <label>Email Address <input type="email" data-biz="email"></label>
+          <label>Opening Hours <input type="text" data-biz="hours"></label>
+          <label class="span-2">Address <input type="text" data-biz="address"></label>
+          <label class="span-2">Hero Badge Text <input type="text" data-biz="heroBadge"></label>
+          <label class="span-2">Hero Title <input type="text" data-biz="heroTitle"></label>
+          <label class="span-2">Hero Subtitle <textarea rows="3" data-biz="heroSub"></textarea></label>
+          <label class="span-2">About Title <input type="text" data-biz="aboutTitle"></label>
+          <label class="span-2">About Paragraph <textarea rows="4" data-biz="aboutText"></textarea></label>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="admin-panel" data-panel="settings">
+        <div class="panel-head">
+          <div>
+            <h2>Settings</h2>
+            <p>Backup, restore and security options.</p>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <div class="settings-card">
+            <h3>Change Admin Password</h3>
+            <label>New Password <input type="password" id="newPass" placeholder="New password"></label>
+            <label>Confirm Password <input type="password" id="newPass2" placeholder="Repeat password"></label>
+            <button class="btn btn-primary" id="savePassBtn" type="button">Update Password</button>
+          </div>
+
+          <div class="settings-card">
+            <h3>Backup &amp; Restore</h3>
+            <p class="muted">Your data lives in this browser only. Export a backup file to move everything to another device.</p>
+            <div class="btn-row">
+              <button class="btn btn-outline" id="exportBtn" type="button">Export Backup</button>
+              <button class="btn btn-outline" id="importBtn" type="button">Import Backup</button>
+              <input type="file" id="importInput" accept="application/json" hidden>
+            </div>
+          </div>
+
+          <div class="settings-card danger-zone">
+            <h3>Danger Zone</h3>
+            <p class="muted">This permanently deletes all your changes and restores the original content.</p>
+            <button class="btn btn-danger" id="resetAllBtn" type="button">Reset Everything</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
